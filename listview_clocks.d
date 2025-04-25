@@ -106,8 +106,7 @@ class GtkClock : ObjectWrap
         import gsk.c.functions, gsk.c.types;
         import graphene.c.functions, graphene.c.types;
 
-        GdkRGBA blackc = GdkRGBA(0,0,0,1);
-        auto black = new RGBA(&blackc);
+        auto black = new RGBA(0,0,0,1);
 
         auto gpt = graphene_point_t(-50, -50);
         auto gst = graphene_size_t(100, 100);
@@ -150,8 +149,7 @@ class GtkClock : ObjectWrap
         gsk_rounded_rect_init_from_rect(&outlinec, &initRectc, 1);
         outline = new RoundedRect(&outlinec, No.Take);
         snap.pushRoundedClip(outline);
-        GdkRGBA redc = GdkRGBA(1,0,0,1);
-        auto red = new RGBA(&redc);
+        auto red = new RGBA(1,0,0,1);
         snap.appendColor(red, outline.bounds());
         snap.pop();
         snap.restore();

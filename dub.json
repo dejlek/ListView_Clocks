@@ -4,5 +4,6 @@
     "dependencies": {
         "gid:gtk4": "==0.9.6",
         "gid:graphene1": "==0.9.6"
-    }
+    },
+    "sourceFiles": ["listview_clocks.d"]
 }
